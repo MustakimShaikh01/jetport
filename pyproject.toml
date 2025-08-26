@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "jetport"
+version = "0.1.0"
+description = "JetPort — local ASGI dev server with TLS, inspector and request replay (prototype)"
+authors = ["Mustakim Shaikh <mustakim.shaikh.prof@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+uvicorn = "^0.21.0"
+typer = "^0.9.0"
+cryptography = "^41.0.0"
+httpx = "^0.24.0"
+aiofiles = "^23.1.0"
+jinja2 = "^3.1.2"
+
+[tool.poetry.scripts]
+jetport = "jetport.cli:app"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
